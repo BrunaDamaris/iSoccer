@@ -136,22 +136,21 @@ Herança:
 
 Interface:
 
-	Motivação: Foi observada a utilização de métodos semelhantes.
+Motivação: Foi observada a utilização de métodos semelhantes.
 
-	Solução: Para tais métodos pode ser criada uma interface para serem utilizados nas classes necessárias.
+Solução: Para tais métodos pode ser criada uma interface para serem utilizados nas classes necessárias.
 
 
 
 Polimorfismo: 
 
-	Motivação: É utilizada interface no sistema.
+Motivação: É utilizada interface no sistema.
 
-	Solução: Na interface são necessaárias a utilização de métodos de mesmo nome onde aplicada, gerando assim o polimorfismo.
+Solução: Na interface são necessaárias a utilização de métodos de mesmo nome onde aplicada, gerando assim o polimorfismo.
 
 
 
 Tratamento de Exceções:
-
 	As exceções ultilizadas estão relacionadas a erros de digitação em certas situações.
 
 - NumberFormatException:
@@ -173,14 +172,13 @@ Tratamento de Exceções:
 
 
 Extensibilidade: 
+A classe TeamEmployees tem três tipos de extensões, a classe Player, Driver e Doctor.
+	
+Motivação: Foi visto necessário utilizar essa extensões porque tais classes contêm variáveis que só estão relacionadas a elas no sistema.
 
-	A classe TeamEmployees tem três tipos de extensões, a classe Player, Driver e Doctor.
+Solução: Foram utilizadas para maior organização do sistema.
 
-	Motivação: Foi visto necessário utilizar essa extensões porque tais classes contêm variáveis que só estão relacionadas a elas no sistema.
+Vantagens: Organização.
 
-	Solução: Foram utilizadas para maior organização do sistema.
-
-	Vantagens: Organização.
-
-	Desvantagens: Maior utilização de classes.
+Desvantagens: Maior utilização de classes.
 	
