@@ -87,8 +87,11 @@ Herança:
 - Doctor: 
 
 	Motivação: Foi criada em vista de que a classe precisava de uma variável CRM em relação a esse funcionário.
+	
 	Solução: Assim, não foram utilizadas variáveis desnecessárias para outros tipos já que o CRM só está ligado a essa.
+	
 	Vantagens: Manipulação em relação a adição, já que como é uma extensão da classe TeamEmployees, ela me permite adicionar mais informações referentes somente a aquele grupo seleto.
+	
 	Desvantagens: A manipulação em relação ao acesso a esse meio em alguns momentos do código pela classe ser uma extensão de outra então foi necessário fazer atribuições para ter suporte a variáveis especificas ligadas a essa classe.
 
 - Driver:
@@ -103,8 +106,11 @@ Herança:
 - Player: 
 
 	Motivação: Foi criada em vista de que a classe precisava de variáveis relacionadas ao tipo de jogador e sua disponiblidade para jogar.
+	
 	Solução: Assim, não foram utilizadas variáveis desnecessárias para outros tipos já que o tipo de jogador e sua disponiblidade só está ligada a essa.
+	
 	Vantagens: Manipulação em relação a adição, já que como é uma extensão da classe TeamEmployees, ela me permite adicionar mais informações referentes somente a aquele grupo seleto.
+	
 	Desvantagens: A manipulação em relação ao acesso a esse meio em alguns momentos do código pela classe ser uma extensão de outra então foi necessário fazer atribuições para ter suporte a variáveis especificas ligadas a essa classe.
 
 - TCenter:
