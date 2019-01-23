@@ -1,4 +1,5 @@
 #iSoccer
+
 Funcionalidades: 
 - O projeto tem como objetivo permitir a administração de um time de futebol por meio de um sistema de login com acesso a um devido funcionário que disponibiliza informações tanto aos funcionários quanto aos recursos do time. No sistema é possivel adicionar funcionários, modificar o status dos jogadores do time (apto ou não apto a jogar), adicionar e/ou acessar os sócios-torcedores do time como editar suas dadas contribuições e se o sócio está adimplente ou não. Também é possivel gerenciar or recursos físicos do time e solicitar relatórios em relação aos mesmos e aos funcionários.
 - O sistema fornece um login de acesso e senha(gerada aleatoriamente) ao ínicio de suas execução. Para a aleatoriedade da senha foi utilizado o Random fornecido pela linguagem e com concatenação.
