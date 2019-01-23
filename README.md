@@ -39,14 +39,18 @@ Distribuição dos Métodos:
  - Adicionar Estádio(addStadium): Presente na classe Resources porque esta classe contém as informações minimas para os recursos.
  - Adicionar Centro de Treinamento(addCenter): Presente na classe Resources porque esta classe contém as informações minimas para os recursos.
 	-Motivação: Organização. Para não ser extremamente necessário a busca extensiva de determinado método quando desejado se os mesmos já tiverem em classes relacionadas a suas funcionalidades.
+	
 	-Solução: A distribuição foi feita em base de associações para cada método e a classe em que está presente com a ideia de manter um padrão onde por exemplo, se quero adicionar um funcionário esse método vai estar na classe relacionada aos funcionários e assim pro diante.
+	
 	-Vantagens: Quando necessária a utilização dos métodos eles podem ser associados mais facilmente.
 
 
 Herança:
 - TeamEmployees:
 	-Motivação: Fazer uma classe de funcionários em que possa, além de adicionar as informações referentes a People, extender para mais informações que são o salário e o tipo e que só são necessários para os funcionários do time.
+	
 	-Solução: Essa classe apresenta uma extensão da classe People e nela é possivel adicionar mais informações as pessoas, no caso, funcionários. Apresenta um método de adição que é utilizado para checar o tipo de funcionário que deseja ser adicionado e o associar a sua devida classe já que, nesse sistema, é possivel que mesmo quando é explicito que designada pessoa é um funcionário, pode associa-lá a outra classe extendida para que sejam guardadas todas as informações referentes ao funcinário. É nesse método em que o a atribuição é feita se o funcionário for criado com sucesso e ainda, se o mesmo ainda não existir no sistema ele é adicionado ao ArrayList dos funcionários.
+	
 	-Vantagens: Manipulação em relação a adição de funcionários, já que como é uma extensão da classe People, ela me permite adicionar mais informações referentes somente a aquele grupo seleto.
 	-Desvantagens: A manipulação em relação ao acesso a esse meio em alguns momentos do código pela classe ser uma extensão de outra então foi necessário fazer atribuições para ter suporte a variáveis especificas ligadas a essa classe.
 - TeamSupporters: 
