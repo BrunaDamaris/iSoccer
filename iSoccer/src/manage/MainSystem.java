@@ -95,7 +95,43 @@ public class MainSystem {
 								trash = input.nextLine();
 							}
 							correctInput = false;
-							TeamEmployees.add(employees,newname,newemail,newtype,newcpf,newphonenumber,newsalary,input);
+							//Begin of add
+							TeamEmployees newperson = null;
+							if(newtype.equals("Medico")) {
+								String ncrm;
+								System.out.println("CRM: ");
+								ncrm = input.nextLine();
+								newperson = new Doctor(newname,newemail,newcpf,newphonenumber,newtype,newsalary,ncrm);
+							}
+							else if(newtype.equals("Motorista")) {
+								String nlisence;
+								System.out.println("Numero de Licenca: ");
+								nlisence = input.nextLine(); 
+								newperson =  new Driver(newname,newemail,newcpf,newphonenumber,newtype,newsalary,nlisence);
+							}
+							else if(newtype.equals("Jogador")) {
+								String ptype = null,status = null;
+								boolean accept = false;
+								while(!accept) {
+									System.out.println("Tipo de Jogador(volante, zagueiro, meia, goleiro, atacante, lateral esquerdo, lateral direito): ");
+									ptype = input.nextLine();
+									if(ptype.equals("volante") || ptype.equals("zagueiro") || ptype.equals("meia") || ptype.equals("goleiro") || ptype.equals("atacante") || ptype.equals("lateral esquerdo") || ptype.equals("lateral direito")) accept = true;
+									else System.out.println("Tipo nao aceito. Tente novamente.");
+								}
+								System.out.println("Status do Jogador(Pode Jogar(1) ou Nao pode Jogar(2)): ");
+								status = input.nextLine();
+								newperson = new Player(newname,newemail,newcpf,newphonenumber,newtype,newsalary,ptype,status);
+							}
+							else {
+								newperson = new TeamEmployees(newname,newemail,newcpf,newphonenumber,newtype,newsalary);
+							}
+							if(employees.contains(newperson)) {
+								System.out.println("Nao foi possivel adicionar. Empregado ja existe");
+							}
+							else {
+								System.out.println("Adicionado com sucesso.");
+								newperson.add(employees,newperson);
+							}
 						}
 						else if(option.equals("2")) {
 							if(employees.size() > 0) {
@@ -189,7 +225,25 @@ public class MainSystem {
 								if(newtype.equals("Junior") || newtype.equals("Senior") || newtype.equals("Elite")) acceptentry = true;
 								else System.out.println("Tipo nao aceito. Tente novamente.");
 							}
-							TeamSupporters.add(supporters,newname,newemail,newtype,newcpf,newphonenumber,newaddress,juniorcontribution,seniorcontribution,elitecontribution);
+							//Begin of add
+							TeamSupporters newperson = null;
+							if(newtype.equals("Junior")) {
+								newperson = new TeamSupporters(newname,newemail,newcpf,newphonenumber,newaddress,newtype,juniorcontribution);
+								System.out.println("Valor de contribuicao inicial: R$ " + juniorcontribution);
+							}
+							else if(newtype.equals("Senior")) {
+								newperson = new TeamSupporters(newname,newemail,newcpf,newphonenumber,newaddress,newtype,seniorcontribution);
+								System.out.println("Valor de contribuicao inicial: R$ " + seniorcontribution);
+							}
+							else if(newtype.equals("Elite")) {
+								newperson = new TeamSupporters(newname,newemail,newcpf,newphonenumber,newaddress,newtype,elitecontribution);
+								System.out.println("Valor de contribuicao inicial: R$ " + elitecontribution);
+							}
+							if(supporters.contains(newperson)) System.out.println("Nao foi possivel adicionar. Torcedor ja existe.");
+							else{
+								System.out.println("Adicionado com sucesso.");
+								newperson.add(supporters,newperson);
+							}
 						}
 						else if(option.equals("2")) {
 							if(supporters.size() > 0) {

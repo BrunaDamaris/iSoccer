@@ -2,7 +2,7 @@ package manage;
 
 import java.util.ArrayList;
 
-public class TeamSupporters extends People{
+public class TeamSupporters extends People implements Inter{
 	private String address;
 	private String supportertype;
 	private double contribution;
@@ -41,24 +41,8 @@ public class TeamSupporters extends People{
 		this.paymentstatus = paymentstatus;
 	}
 
-	public static void add(ArrayList<People> supporters,String newname, String newemail, String newtype, String newcpf, String newphonenumber,String newaddress,double juniorcontribution,double seniorcontribution,double elitecontribution) {
-		People newperson = null;
-		if(newtype.equals("Junior")) {
-			newperson = new TeamSupporters(newname,newemail,newcpf,newphonenumber,newaddress,newtype,juniorcontribution);
-			System.out.println("Valor de contribuicao inicial: R$ " + juniorcontribution);
-		}
-		else if(newtype.equals("Senior")) {
-			newperson = new TeamSupporters(newname,newemail,newcpf,newphonenumber,newaddress,newtype,seniorcontribution);
-			System.out.println("Valor de contribuicao inicial: R$ " + seniorcontribution);
-		}
-		else if(newtype.equals("Elite")) {
-			newperson = new TeamSupporters(newname,newemail,newcpf,newphonenumber,newaddress,newtype,elitecontribution);
-			System.out.println("Valor de contribuicao inicial: R$ " + elitecontribution);
-		}
-		if(supporters.contains(newperson)) System.out.println("Nao foi possivel adicionar. Torcedor ja existe.");
-		else{
-			supporters.add(newperson);
-			System.out.println("Adicionado com sucesso.");
-		}
+	@Override
+	public void add(ArrayList<People> array, Object P) {
+		array.add((TeamSupporters) P);
 	}
 }

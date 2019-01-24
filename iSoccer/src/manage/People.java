@@ -1,6 +1,6 @@
 package manage;
 
-public class People {
+public class People{
 	private String fullname;
 	private String email;
 	private String cpf;
@@ -37,5 +37,4 @@ public class People {
 	public void setPhonenumber(String phonenumber) {
 		this.phonenumber = phonenumber;
 	}
-	
 }

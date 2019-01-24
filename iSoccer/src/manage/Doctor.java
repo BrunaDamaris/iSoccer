@@ -7,7 +7,7 @@ public class Doctor extends TeamEmployees{
 		super(name, nemail, ncpf, pnumber,ntype,nsalary);
 		setCRM(ncrm);
 	}
-
+	
 	public String getCRM() {
 		return CRM;
 	}
